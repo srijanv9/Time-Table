@@ -1,139 +1,152 @@
 <!<!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
+
     <head>
         <!-- Srijan's Time Table  -->
         <title>Sem-5 TT by Srijan</title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="scripts/overstyle.css">
     </head>
+
     <body>
         <div class="wrapper">
             <div class="display">
-               <div id="time"></div>
+                <div id="time"></div>
             </div>
             <span></span>
             <span></span>
-         </div>
-         <script>
-            setInterval(()=>{
-              const time = document.querySelector(".display #time");
-              let date = new Date();
-              let hours = date.getHours();
-              let minutes = date.getMinutes();
-              let seconds = date.getSeconds();
-              let day_night = "AM";
-              if(hours > 12){
-                day_night = "PM";
-                hours = hours - 12;
-              }
-              if(seconds < 10){
-                seconds = "0" + seconds;
-              }
-              if(minutes < 10){
-                minutes = "0" + minutes;
-              }
-              if(hours < 10){
-                hours = "0" + hours;
-              }
-              time.textContent = hours + ":" + minutes + ":" + seconds + " "+ day_night;
+        </div>
+        <script>
+            setInterval(() => {
+                const time = document.querySelector(".display #time");
+                let date = new Date();
+                let hours = date.getHours();
+                let minutes = date.getMinutes();
+                let seconds = date.getSeconds();
+                let day_night = "AM";
+                if (hours > 12) {
+                    day_night = "PM";
+                    hours = hours - 12;
+                }
+                if (seconds < 10) {
+                    seconds = "0" + seconds;
+                }
+                if (minutes < 10) {
+                    minutes = "0" + minutes;
+                }
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+                time.textContent = hours + ":" + minutes + ":" + seconds + " " + day_night;
             });
-         </script>
+        </script>
 
 
-    <div class="table-container">
-        <h1 class="heading">TIME-TABLE</h1>
-        <h3 class="heading">sem-5</h3>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>X</th>
-                    <th>8-9 AM</th>
-                    <th>9-10 AM</th>
-                    <th>10-11 AM</th>
-                    <th>11-12 AM</th>
-                    <th>12-1 PM</th>
-                    <th>1-2 PM</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-label="X"><span class="text_open">MONDAY</span></td>
-                    <td data-label="8-9 AM">No class now!</td>
-                    <td data-label="9-10 AM"><a href=" https://meet.google.com/zca-hgss-qos" class="btn">Software Engg</a></td>
-                    <td data-label="10-11 AM"><a href="
-                        https://meet.google.com/lookup/d7ghplms6c" class="btn">Cryptography</a></td>
-                    <td data-label="11-12 PM"><a href="https://us04web.zoom.us/j/77139000486?pwd=MHJkVTU0SEhzQW54cWRuZlExQ0I5Zz09" class="btn">Comp Net</a></td>
-                    <td data-label="12-1 PM"><a href="https://meet.google.com/lookup/ct3bgb22dg" class="btn">DBMS</a></td>
-                    <td data-label="1-2 PM"><a href="https://meet.google.com/lookup/h6wo4rqpby" class="btn">ITC</a></td>
-                </tr>
-                <tr>
-                    <td data-label="X"><span class="text_open">TUESDAY</span></td>
-                    <td data-label="8-9 AM">No class now!</td>
-                    <td data-label="9-10 AM"><a href=" https://meet.google.com/zca-hgss-qos" class="btn">Software Engg</a></td>
-                    <td data-label="10-11 AM"><a href="https://us04web.zoom.us/j/77139000486?pwd=MHJkVTU0SEhzQW54cWRuZlExQ0I5Zz09" class="btn">Comp net</a></td>
-                    <td data-label="11-12 PM"><a href="https://meet.google.com/nsk-kawh-zgv" class="btn">DAA</a></td>
-                    <td data-label="12-1 PM"><a href="https://meet.google.com/nsk-kawh-zgv" class="btn">DAA LAB</a></td>
-                    <td data-label="1-2 PM"><a href="https://meet.google.com/nsk-kawh-zgv" class="btn">DAA LAB</a></td>
-                </tr>
-                <tr>
-                    <td data-label="X"><span class="text_open">WEDNESDAY</span></td>
-                    <td data-label="8-9 AM">No class now!</td>
-                    <td data-label="9-10 AM"><a href="https://meet.google.com/lookup/ct3bgb22dg" class="btn">DBMS</a></td>
-                    <td data-label="10-11 AM"><a href="https://meet.google.com/lookup/h6wo4rqpby" class="btn">ITC</a></td>
-                    <td data-label="11-12 PM"><a href="https://meet.google.com/lookup/d7ghplms6c" class="btn">Cryptography</a></td>
-                    <td data-label="12-1 PM"><a href=" https://meet.google.com/zca-hgss-qos" class="btn">Soft Engg</a></td>
-                    <td data-label="1-2 PM">No class Now!</td>
-                </tr>
-                <tr>
-                    <td data-label="X"><span class="text_open">THURSDAY</span></td>
-                    <td data-label="8-9 AM">No class now!</td>
-                    <td data-label="9-10 AM"><a href="https://meet.google.com/nsk-kawh-zgv" class="btn">DAA</a></td>
-                    <td data-label="10-11 AM"><a href="https://meet.google.com/lookup/h6wo4rqpby" class="btn">ITC</a></td>
-                    <td data-label="11-12 PM"><a href="https://meet.google.com/lookup/ct3bgb22dg" class="btn">DBMS</a></td>
-                    <td data-label="12-1 PM"><a href="https://meet.google.com/vsg-zkxx-pov" class="btn">DBMS LAB</a></td>
-                    <td data-label="1-2 PM"><a href="https://meet.google.com/vsg-zkxx-pov" class="btn">DBMS LAB</a></td>
-                </tr>
-                <tr>
-                    <td data-label="X"><span class="text_open">FRIDAY</span></td>
-                    <td data-label="8-9 AM">No class now!</td>
-                    <td data-label="9-10 AM"><a href="
-                        https://meet.google.com/lookup/d7ghplms6c" class="btn">Cryptography</a></td>
-                    <td data-label="10-11 AM"><a href="https://meet.google.com/nsk-kawh-zgv" class="btn">DAA</a></td>
-                    <td data-label="11-12 AM"><a href="https://meet.google.com/lookup/ct3bgb22dg" class="btn">DBMS</a></td>
-                    <td data-label="12-1 PM"><a href=" https://meet.google.com/zca-hgss-qos" class="btn">Soft Engg</a></td>
-                    <td data-label="1-2 PM">No class now!</td>
-                </tr>
-            </tbody>
-        </table>
-        <footer class="heading">
-            <h6>&copy; Srijan Verma
-            </h6>
+        <div class="table-container">
+            <h1 class="heading">TIME-TABLE</h1>
+            <h3 class="heading">sem-5</h3>
+
+            
+
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>X</th>
+                        <th>8-9 AM</th>
+                        <th>9-10 AM</th>
+                        <th>10-11 AM</th>
+                        <th>11-12 AM</th>
+                        <th>12-1 PM</th>
+                        <th>1-2 PM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="text_open">MONDAY</span></td>
+                        <td id="nan" class="launcher"> <button class="btn">No class now!</button>
+                        </td>
+                        <td id="se" class="launcher"><button class="btn">Software Engg</button></td>
+                        <td id="cryci" class="launcher"><button class="btn">CRY/CI</button></td>
+                        <td id="cn" class="launcher"><button class="btn">Comp Net</button></td>
+                        <td id="dbms" class="launcher"><button class="btn">DBMS</button></td>
+                        <td id="itc" class="launcher"><button class="btn">ITC</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="text_open">TUESDAY</span></td>
+                        <td id="nan" class="launcher"> <button class="btn">No class now!</button> </td>
+                        <td id="se" class="launcher"><button class="btn">Software Engg</button></td>
+                        <td id="cn" class="launcher"><button class="btn">Comp Net</button></td>
+                        <td id="daa" class="launcher"> <button class="btn">DAA</button> </td>
+                        <td id="daalab" class="launcher"><button class="btn">DAA LAB</button></td>
+                        <td id="daalab" class="launcher"><button class="btn">DAA LAB</button></td>
+
+                    </tr>
+                    <tr>
+                        <td><span class="text_open">WEDNESDAY</span></td>
+                        <td id="nan" class="launcher"> <button class="btn">No class now!</button> </td>
+                        <td id="dbms" class="launcher"><button class="btn">DBMS</button></td>
+                        <td id="itc" class="launcher"><button class="btn">ITC</button></td>
+                        <td id="cryci" class="launcher"> <button class="btn">CRY/CI</button> </td>
+                        <td id="se" class="launcher"><button class="btn">SE</button></td>
+                        <td id="nan" class="launcher"> <button class="btn">No class now!</button> </td>
+                    </tr>
+                    <tr>
+                        <td><span class="text_open">THURSDAY</span></td>
+                        <td id="nan" class="launcher"> <button class="btn">No class now!</button> </td>
+                        <td id="daa" class="launcher"><button class="btn">DAA</button></td>
+                        <td id="itc" class="launcher"><button class="btn">ITC</button></td>
+                        <td id="dbms" class="launcher"> <button class="btn">DBMS</button> </td>
+                        <td id="dbmslab" class="launcher"><button class="btn">DBMS LAB</button></td>
+                        <td id="dbmslab" class="launcher"><button class="btn">DBMS LAB</button></td>
+                    </tr>
+                    <tr>
+                        <td><span class="text_open">FRIDAY</span></td>
+                        <td id="nan" class="launcher"> <button class="btn">No class now!</button> </td>
+                        <td id="cryci" class="launcher"> <button class="btn">CRY/CI</button> </td>
+                        <td id="daa" class="launcher"> <button class="btn">DAA</button> </td>
+                        <td id="dbms" class="launcher"> <button class="btn">DBMS</button> </td>
+                        <td id="se" class="launcher"><button class="btn">SE</button></td>
+                        <td id="nan" class="launcher"> <button class="btn">No class now!</button> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <footer class="heading">
+                <h6>&copy; Srijan Verma
+                </h6>
             </footer>
-        <!-- <h3 class="heading">Made by Srijan</h3> -->
-    </div>
-    <div class="helo">
-    <div data-label="op" class="footer">
-        
-        <ul>
-            <li>
-            <a href="https://www.facebook.com/srijan.verma.543"><i class="fab fa-facebook-f icon"></i>    </a>
-            </li>
-            <li>
-            <a href="https://twitter.com/SrijanVerma12"><i class="fab fa-twitter icon"></i></a>
-            </li>
-            <li>
-            <a href="https://www.linkedin.com/in/srijanv9/"><i class="fab fa-linkedin-in icon"></i></a></li>
-            <li>
-            <a href = "5th CSCE.pdf" download><i class="fab fa fa-download icon" aria-hidden="true"></i></a></li>
-        </ul>
-        
-    </div>
-    
-</div>
+            <!-- <h3 class="heading">Made by Srijan</h3> -->
+        </div>
+        <div class="helo">
+            <div data-label="op" class="footer">
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
-    </script>
+                <ul class="contactMe">
+                    <li>
+                        <a href="https://www.facebook.com/srijan.verma.543"><i class="fab fa-facebook-f icon"></i> </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/SrijanVerma12"><i class="fab fa-twitter icon"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/srijanv9/"><i class="fab fa-linkedin-in icon"></i></a>
+                    </li>
+                    <li>
+                        <a href="5th CSCE.pdf" download><i class="fab fa fa-download icon" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <script src="/scripts/app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+            </script>
     </body>
-</html>
+
+    </html>
